@@ -51,7 +51,7 @@
   /* Layout */
   --max-width: 1200px;
   --section-padding: 7.5rem;
-  --nav-height: 72px;
+  --nav-height: 0px;
 
   /* Typography */
   --font-heading: var(--font-space-grotesk), 'Space Grotesk', system-ui, sans-serif;
