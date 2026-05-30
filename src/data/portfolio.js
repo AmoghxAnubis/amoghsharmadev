@@ -168,6 +168,17 @@ export const projects = [
     featured: true,
   },
   {
+    id: 7,
+    title: "SentinelCI",
+    description:
+      "An AI-augmented CI/CD pipeline platform that automates test execution and monitors build health across projects. Supports webhook, scheduled, and manual pipeline triggers with real-time run statuses (Queued → In Progress → Passed/Failed). Built with a Node.js/Prisma/PostgreSQL backend, Next.js frontend, and deployed on Vercel.",
+    tags: ["Next.js", "Node.js", "TypeScript", "Prisma", "PostgreSQL", "Framer Motion"],
+    category: "ML/AI",
+    github: "https://github.com/AmoghxAnubis/SentinelCI",
+    live: "https://sentinel-ci.vercel.app",
+    featured: false,
+  },
+  {
     id: 2,
     title: "TrenchesPad",
     description:
