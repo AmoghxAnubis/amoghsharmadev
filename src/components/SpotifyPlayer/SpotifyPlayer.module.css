@@ -1,0 +1,62 @@
+.spotifyContainer {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.spotifyContainer.minimized {
+  transform: translateX(-110%); /* slide off screen */
+}
+
+/* We need a toggle button if it slides off screen, but a simpler approach is a circular button that floats in the corner. */
+
+.floatingBtn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 10000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-medium);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+.floatingBtn:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: var(--shadow-glow-cyan);
+  transform: scale(1.05);
+}
+
+.playerWrapper {
+  position: fixed;
+  bottom: 24px;
+  left: 84px; /* offset by the button + gap */
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-20px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.playerWrapper.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}

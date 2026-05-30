@@ -56,6 +56,8 @@ export const metadata = {
   },
 };
 
+import SpotifyPlayer from "@/components/SpotifyPlayer/SpotifyPlayer";
+
 export default function RootLayout({ children }) {
   return (
     <html
@@ -63,7 +65,10 @@ export default function RootLayout({ children }) {
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <SpotifyPlayer />
+      </body>
     </html>
   );
 }
