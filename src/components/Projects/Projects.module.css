@@ -44,8 +44,8 @@
 
 /* ---------- Project Card ---------- */
 .projectCard {
-  background: #09090b;
-  border: 1px solid #27272a;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
@@ -54,7 +54,7 @@
 }
 
 .projectCard:hover {
-  border-color: #52525b;
+  border-color: var(--border-accent);
 }
 
 /* ---------- Project Image Area ---------- */
@@ -81,12 +81,12 @@
 .projectTitle {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #f4f4f5;
+  color: var(--text-primary);
   margin-bottom: var(--space-4);
 }
 
 .projectDesc {
-  color: #a1a1aa;
+  color: var(--text-secondary);
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: var(--space-6);
@@ -105,13 +105,13 @@
 }
 
 .tag {
-  background: #18181b;
-  color: #e4e4e7;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
   padding: 4px 12px;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  border: 1px solid #27272a;
+  border: 1px solid var(--border-medium);
 }
 
 /* ---------- Links ---------- */
@@ -126,14 +126,14 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  color: #a1a1aa;
+  color: var(--text-secondary);
   font-size: 0.875rem;
   font-weight: 500;
   transition: color var(--transition-base);
 }
 
 .projectLink:hover {
-  color: #f4f4f5;
+  color: var(--text-primary);
 }
 
 /* ---------- Responsive: Tablet ---------- */

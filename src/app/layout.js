@@ -56,6 +56,8 @@ export const metadata = {
   },
 };
 
+import { ThemeProvider } from "@/components/ThemeProvider/ThemeProvider";
+import Header from "@/components/Header/Header";
 import SpotifyPlayer from "@/components/SpotifyPlayer/SpotifyPlayer";
 
 export default function RootLayout({ children }) {
@@ -66,8 +68,11 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <body suppressHydrationWarning>
-        {children}
-        <SpotifyPlayer />
+        <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem>
+          <Header />
+          {children}
+          <SpotifyPlayer />
+        </ThemeProvider>
       </body>
     </html>
   );
