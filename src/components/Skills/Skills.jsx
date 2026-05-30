@@ -160,7 +160,7 @@ export default function Skills() {
 
         {/* 3D interactive skill sphere */}
         <div className={styles.orbContainer}>
-          <p className={styles.orbLabel}>Interactive Skill Map</p>
+          <p className={styles.orbLabel}>Skill Graph — hover to explore connections</p>
           <SkillOrb />
         </div>
       </div>
