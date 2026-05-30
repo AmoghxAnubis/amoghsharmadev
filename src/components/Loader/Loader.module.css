@@ -1,0 +1,31 @@
+.loaderContainer {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* When exiting, we will slide it up */
+  transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1), border-radius 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.loaderContainer.hidden {
+  transform: translateY(-100vh);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.helloText {
+  font-family: var(--font-body);
+  font-size: var(--text-4xl);
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .helloText {
+    font-size: var(--text-6xl);
+  }
+}
