@@ -17,10 +17,39 @@ export const personalInfo = {
   heroBio: "Software engineer with a passion for building products that are not just functional — they're experiences. Specializing in full-stack development, ML, and cloud architecture.",
   email: "amogh@example.com",
   location: "San Francisco, CA",
-  bio: `I'm a passionate technologist who thrives at the intersection of creativity and engineering. 
-  With expertise spanning full-stack development, machine learning, cloud architecture, and blockchain, 
-  I build products that are not just functional — they're experiences. I believe great software should 
-  feel invisible, empowering users while delighting them with every interaction.`,
+  bio: `I'm Amogh, a software engineer with a deep passion for building scalable systems and crafting elegant user experiences. With expertise spanning full-stack development, machine learning, and cloud architecture, I build products that are not just functional — they're experiences. I believe great software should feel invisible, empowering users while delighting them with every interaction.`,
+  aboutTraits: [
+    {
+      icon: "</>",
+      title: "Developer",
+      description: "Full-stack engineer with expertise in React, Node.js, and cloud architecture. Building scalable systems and exploring new technologies.",
+    },
+    {
+      icon: "⚡",
+      title: "Tech Lead",
+      description: "Leading engineering teams, architecting systems, and mentoring developers. Contributing to open-source projects and technical communities.",
+    },
+    {
+      icon: "🧩",
+      title: "Problem Solver",
+      description: "Passionate about building solutions that solve real problems. Constantly learning better ways to tackle complex challenges.",
+    },
+    {
+      icon: "→",
+      title: "Current Focus",
+      description: "Exploring AI/ML integration in production systems, building with LLMs, and scaling cloud-native applications with Kubernetes.",
+    },
+  ],
+  aboutProfile: {
+    experience: [
+      { title: "Sr. Full Stack Developer", subtitle: "TechCorp" },
+      { title: "ML Engineer", subtitle: "DataLabs AI" },
+    ],
+    education: [
+      { title: "IIT", subtitle: "B.Tech in Computer Science" },
+    ],
+    interests: ["Cloud Architecture", "Machine Learning", "React", "Kubernetes", "Python", "Docker"],
+  },
   heroTechPills: [
     { name: "React", color: "#61DAFB" },
     { name: "Python", color: "#3776AB" },

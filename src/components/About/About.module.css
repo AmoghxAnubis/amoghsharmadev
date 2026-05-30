@@ -1,147 +1,236 @@
 /* ============================================
-   ABOUT SECTION — Styles
+   ABOUT SECTION — Bio + Traits + Profile Card
    ============================================ */
 
-/* ---------- Split Layout ---------- */
-.grid {
+/* ---------- Main Layout ---------- */
+.layout {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+/* ---------- Left Column ---------- */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
 }
 
 .bioText {
   font-size: var(--text-lg);
-  line-height: 1.9;
+  line-height: 1.85;
   color: var(--text-secondary);
-  max-width: 560px;
 }
 
-/* ---------- Photo Frame ---------- */
-.photoFrame {
-  aspect-ratio: 4 / 5;
-  border-radius: var(--radius-xl);
+/* ---------- Trait Cards Grid ---------- */
+.traitsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.traitCard {
+  background: var(--bg-glass);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  transition: all var(--transition-base);
   position: relative;
-  padding: 3px;
-  background: var(--accent-gradient);
-}
-
-.photoFrameInner {
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(
-    160deg,
-    rgba(0, 240, 255, 0.08),
-    rgba(139, 92, 246, 0.12)
-  );
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.photoPlaceholderText {
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  opacity: 0.5;
+.traitCard:hover {
+  border-color: var(--border-medium);
+  transform: translateY(-2px);
 }
 
-.glowOrb {
+.traitCard::after {
+  content: '';
   position: absolute;
-  width: 300px;
-  height: 300px;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--accent-gradient);
+  opacity: 0.04;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(0, 240, 255, 0.35),
-    rgba(139, 92, 246, 0.25),
-    transparent 70%
-  );
-  filter: blur(80px);
-  opacity: 0.3;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  filter: blur(20px);
   pointer-events: none;
 }
 
-/* ---------- Stats Grid ---------- */
-.statsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
-  margin-top: var(--space-16);
+.traitIcon {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-weight: 700;
 }
 
-.statCard {
-  text-align: center;
-  padding: var(--space-8) var(--space-4);
+.traitTitle {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
 }
 
-.statValue {
-  font-size: var(--text-5xl);
-  font-weight: 800;
+.traitDesc {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ---------- Right Column: Profile Card ---------- */
+.profileCard {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-6));
+}
+
+/* Avatar */
+.avatarWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-6);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-cyan-dim), var(--accent-purple-dim));
+  border: 2px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1.1;
-  margin-bottom: var(--space-2);
+  position: relative;
 }
 
-.statLabel {
-  font-size: var(--text-sm);
+.avatarRing {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, rgba(0,240,255,0.05), rgba(139,92,246,0.05));
+}
+
+/* Section labels */
+.profileSectionLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: var(--space-2);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.profileSectionLabel::before {
+  content: '$';
+  color: var(--accent-cyan);
+}
+
+/* Profile entries */
+.profileEntries {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.profileEntry {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.entryArrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.entryInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.entryTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.entrySubtitle {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Interest tags */
+.interestTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.interestTag {
+  padding: 4px 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 768px) {
-  .grid {
+@media (max-width: 900px) {
+  .layout {
     grid-template-columns: 1fr;
-    gap: var(--space-10);
+    gap: var(--space-8);
   }
 
-  .bioText {
-    max-width: 100%;
-  }
-
-  .photoFrame {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  .statsGrid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-4);
-    margin-top: var(--space-12);
-  }
-
-  .statValue {
-    font-size: var(--text-4xl);
+  .profileCard {
+    position: static;
   }
 }
 
 @media (max-width: 480px) {
-  .statsGrid {
+  .traitsGrid {
     grid-template-columns: 1fr;
-    gap: var(--space-4);
   }
 
-  .statCard {
-    padding: var(--space-6) var(--space-4);
-  }
-
-  .glowOrb {
-    width: 200px;
-    height: 200px;
+  .bioText {
+    font-size: var(--text-base);
   }
 }
