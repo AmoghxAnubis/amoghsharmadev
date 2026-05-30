@@ -210,6 +210,16 @@ export const projects = [
     featured: false,
   },
   {
+    id: 10,
+    title: "Agora",
+    description:
+      "A real-time collaborative code editor with an Apple-inspired 'Cupertino Minimal' design aesthetic. Features instant code synchronization, secure Supabase authentication, persistent session storage, and live user presence. Powered by the Monaco Editor.",
+    tags: ["React", "Node.js", "Express", "Socket.io", "Supabase", "Tailwind CSS", "Monaco"],
+    category: "Full Stack",
+    github: "https://github.com/AmoghxAnubis/Agora",
+    featured: true,
+  },
+  {
     id: 3,
     title: "rise.ia",
     description:
