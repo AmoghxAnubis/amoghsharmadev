@@ -42,8 +42,8 @@ export const personalInfo = {
   ],
   aboutProfile: {
     experience: [
-      { title: "Sr. Full Stack Developer", subtitle: "TechCorp" },
-      { title: "ML Engineer", subtitle: "DataLabs AI" },
+      { title: "Creative Director", subtitle: "Elevenx" },
+      { title: "Freelance", subtitle: "Design & Development" },
     ],
     education: [
       { title: "Bennett University", subtitle: "B.Tech in Computer Science (3rd Year) • 8.2 CGPA" },
@@ -226,44 +226,28 @@ export const projects = [
 export const experience = [
   {
     id: 1,
-    role: "Senior Full Stack Developer",
-    company: "TechCorp",
-    period: "2024 — Present",
+    role: "Creative Director",
+    company: "Elevenx",
+    period: "2023 — Present",
     description:
-      "Leading the development of a next-generation SaaS platform serving 50K+ users. Architected microservices infrastructure and mentored a team of 6 engineers.",
+      "Leading creative direction and design strategy. Overseeing brand identity, product design, and visual storytelling for various client projects.",
     highlights: [
-      "Rebuilt the frontend with Next.js, improving performance scores by 45%",
-      "Designed and implemented real-time collaboration features using WebSockets",
-      "Established CI/CD pipelines reducing deployment time from 2 hours to 15 minutes",
-      "Mentored junior developers through code reviews and pair programming sessions",
+      "Directed multiple high-impact branding campaigns",
+      "Established comprehensive design systems and guidelines",
+      "Bridged the gap between design and engineering teams",
     ],
   },
   {
     id: 2,
-    role: "ML Engineer",
-    company: "DataLabs AI",
-    period: "2022 — 2024",
+    role: "Freelance",
+    company: "Self-Employed",
+    period: "2021 — Present",
     description:
-      "Built and deployed production ML models for NLP and computer vision applications. Worked on the core recommendation engine processing 1M+ daily predictions.",
+      "Providing design, development, and creative consultation services to a variety of global clients.",
     highlights: [
-      "Developed a recommendation engine increasing user engagement by 35%",
-      "Built an NLP pipeline for automated content moderation with 97% accuracy",
-      "Optimized model serving infrastructure, reducing inference latency by 60%",
-      "Published research on efficient transformer fine-tuning techniques",
-    ],
-  },
-  {
-    id: 3,
-    role: "Frontend Developer",
-    company: "StartupXYZ",
-    period: "2021 — 2022",
-    description:
-      "First engineering hire at an early-stage startup. Built the entire frontend from scratch and established the design system and development practices.",
-    highlights: [
-      "Built the product from 0 to 1, achieving product-market fit within 6 months",
-      "Created a reusable component library reducing development time by 40%",
-      "Implemented responsive designs achieving 100 Lighthouse accessibility score",
-      "Integrated analytics and A/B testing frameworks for data-driven decisions",
+      "Built custom web applications for 10+ clients",
+      "Delivered end-to-end product design and development",
+      "Maintained a focus on aesthetics and user experience",
     ],
   },
 ];
