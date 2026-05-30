@@ -201,14 +201,13 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Real-time Chat Platform",
+    title: "rise.ia",
     description:
-      "A scalable real-time messaging platform with E2E encryption, file sharing, video calls, and AI-powered message summarization. Supports 10K+ concurrent users.",
-    tags: ["Next.js", "Socket.io", "Redis", "PostgreSQL", "WebRTC"],
+      "A design agency landing page built with React 19 and Vite, showcasing services across Web Development, Marketing & Branding, and Motion & Media. Features smooth scroll-progress indicators, intersection-observer-based fade-in animations, a portfolio showcase, and a contact section — all hand-crafted with vanilla CSS and custom icon components.",
+    tags: ["React", "Vite", "JavaScript", "CSS", "Framer Motion"],
     category: "Frontend",
-    github: "https://github.com/amogh/chat-platform",
-    live: "https://chat.demo.com",
-    featured: true,
+    github: "https://github.com/AmoghxAnubis/rise.ia",
+    featured: false,
   },
   {
     id: 4,
