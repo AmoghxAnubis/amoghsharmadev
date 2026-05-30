@@ -1,0 +1,220 @@
+/* ============================================
+   HERO SECTION — Full-viewport landing area
+   ============================================ */
+
+/* ---------- Wrapper ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-16) var(--space-6);
+}
+
+/* ---------- Particle canvas ---------- */
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* ---------- Content ---------- */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+/* ---------- Greeting ---------- */
+.greeting {
+  font-family: var(--font-heading);
+  font-size: var(--text-6xl);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.gradientName {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- Typewriter ---------- */
+.typewriterRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.8rem;
+  gap: 0;
+}
+
+.typewriterText {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  color: var(--accent-cyan);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.3em;
+  background: var(--accent-cyan);
+  margin-left: 2px;
+  animation: blink 0.75s step-end infinite;
+}
+
+/* ---------- Tagline ---------- */
+.tagline {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ---------- CTAs ---------- */
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+/* ---------- Scroll Indicator ---------- */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  animation: bounce-subtle 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.scrollText {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.chevron {
+  width: 24px;
+  height: 24px;
+  border-right: 2px solid var(--accent-cyan);
+  border-bottom: 2px solid var(--accent-cyan);
+  transform: rotate(45deg);
+  opacity: 0.6;
+}
+
+/* ---------- Floating Decorations ---------- */
+.decoration {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.decoration1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-cyan);
+  top: -10%;
+  right: -8%;
+  opacity: 0.12;
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.decoration2 {
+  width: 350px;
+  height: 350px;
+  background: var(--accent-purple);
+  bottom: -5%;
+  left: -10%;
+  opacity: 0.15;
+  animation: float-slow 10s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.decoration3 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  top: 40%;
+  left: 60%;
+  opacity: 0.08;
+  animation: float-slow 12s ease-in-out infinite;
+  animation-delay: -6s;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .greeting {
+    font-size: var(--text-4xl);
+  }
+
+  .typewriterText {
+    font-size: var(--text-xl);
+  }
+
+  .tagline {
+    font-size: var(--text-base);
+  }
+
+  .ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .decoration1 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .decoration2 {
+    width: 220px;
+    height: 220px;
+  }
+
+  .decoration3 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .greeting {
+    font-size: var(--text-3xl);
+  }
+
+  .typewriterText {
+    font-size: var(--text-lg);
+  }
+
+  .tagline {
+    font-size: var(--text-sm);
+  }
+
+  .scrollIndicator {
+    bottom: 1rem;
+  }
+}
