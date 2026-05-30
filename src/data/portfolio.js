@@ -230,35 +230,13 @@ export const projects = [
     featured: false,
   },
   {
-    id: 4,
-    title: "K8s Auto-Scaler Engine",
+    id: 11,
+    title: "PBD",
     description:
-      "Custom Kubernetes autoscaler that uses ML-based prediction to proactively scale workloads before traffic spikes. Reduced infrastructure costs by 40% in production.",
-    tags: ["Go", "Kubernetes", "Prometheus", "TensorFlow", "Terraform"],
-    category: "DevOps",
-    github: "https://github.com/amogh/k8s-autoscaler",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Neural Style Transfer App",
-    description:
-      "A web application that applies artistic styles to photos using neural style transfer. Features real-time preview, batch processing, and a gallery of pre-trained artistic models.",
-    tags: ["PyTorch", "React", "FastAPI", "CUDA", "Docker"],
-    category: "ML/AI",
-    github: "https://github.com/amogh/style-transfer",
-    live: "https://style.demo.com",
-    featured: true,
-  },
-  {
-    id: 6,
-    title: "Design System Library",
-    description:
-      "A comprehensive, accessible component library with 50+ components, dark/light themes, and full Storybook documentation. Used across 5 production applications.",
-    tags: ["React", "TypeScript", "Storybook", "CSS Modules", "Jest"],
+      "A frontend interface demonstrating a brutalist design approach. Built with Next.js 16 and React 19, this project features stark contrasts, aggressive typography, and a custom sliding social card component superimposed over a raw brutalist iframe experience.",
+    tags: ["Next.js", "React 19", "Tailwind CSS", "Brutalist Design"],
     category: "Frontend",
-    github: "https://github.com/amogh/design-system",
-    live: "https://design.demo.com",
+    github: "https://github.com/AmoghxAnubis/PBD",
     featured: false,
   },
 ];
