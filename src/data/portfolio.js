@@ -169,13 +169,12 @@ export const projects = [
   },
   {
     id: 2,
-    title: "DeFi Yield Dashboard",
+    title: "TrenchesPad",
     description:
-      "A comprehensive DeFi analytics dashboard tracking yield farming opportunities across multiple chains. Real-time data visualization with wallet integration and portfolio tracking.",
-    tags: ["React", "Web3.js", "Solidity", "The Graph", "D3.js"],
+      "A tokenized crowdfunding launchpad built on Base. Uses a Factory Pattern with three core Solidity contracts — LaunchpadFactory deploys campaigns, Crowdsale handles ETH contributions/refunds, and ProjectToken mints ERC-20 tokens to backers. Features three campaign states (Active, Successful, Failed) with on-chain fund distribution logic. 19/21 tests passing on Base Sepolia testnet.",
+    tags: ["Solidity", "Hardhat", "Base", "ERC-20", "TypeScript", "Ethers.js"],
     category: "Blockchain",
-    github: "https://github.com/amogh/defi-dashboard",
-    live: "https://defi-dash.demo.com",
+    github: "https://github.com/AmoghxAnubis/TrenchesPad",
     featured: true,
   },
   {
