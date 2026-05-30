@@ -15,7 +15,7 @@ export const personalInfo = {
   badge: "Open to Opportunities",
   tagline: "Crafting digital experiences at the intersection of design and technology",
   heroBio: "Third year student at Bennett University with a passion for building products that are not just functional — they're experiences. Specializing in full-stack development, ML, and cloud architecture.",
-  email: "amogh@example.com",
+  email: "amoghzack321@gmail.com",
   location: "Greater Noida, India",
   bio: `I'm Amogh, a third year Computer Science student at Bennett University (CGPA: 8.2) with a deep passion for building scalable systems and crafting elegant user experiences. With expertise spanning full-stack development, machine learning, and cloud architecture, I build products that are not just functional — they're experiences.`,
   aboutTraits: [
@@ -66,10 +66,10 @@ export const personalInfo = {
     { label: "Years Experience", value: 4 },
   ],
   social: {
-    github: "https://github.com/amogh",
-    linkedin: "https://linkedin.com/in/amogh",
-    twitter: "https://twitter.com/amogh",
-    email: "mailto:amogh@example.com",
+    github: "https://github.com/AmoghxAnubis",
+    linkedin: "https://www.linkedin.com/in/amogh-sharma-9aa6a1288",
+    twitter: "https://x.com/_amoghsharma_",
+    email: "mailto:amoghzack321@gmail.com",
   },
   resumeUrl: "/resume.pdf",
 };
