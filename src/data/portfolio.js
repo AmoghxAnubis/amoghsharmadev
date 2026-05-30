@@ -200,6 +200,16 @@ export const projects = [
     featured: true,
   },
   {
+    id: 9,
+    title: "Stellar Pay (tranxt)",
+    description:
+      "A minimal, production-ready Stellar dApp on Testnet. Integrates the Freighter wallet (v6 API) to view real-time XLM balances and build, sign, and submit payment transactions. Features a sleek dark-mode UI with transaction feedback states and comprehensive error handling.",
+    tags: ["Next.js", "Stellar SDK", "Freighter API", "Tailwind CSS"],
+    category: "Blockchain",
+    github: "https://github.com/AmoghxAnubis/tranxt",
+    featured: false,
+  },
+  {
     id: 3,
     title: "rise.ia",
     description:
