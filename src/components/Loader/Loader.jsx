@@ -26,13 +26,13 @@ export default function Loader() {
       // After reaching the last word, wait a bit then hide the loader
       const finishTimeout = setTimeout(() => {
         setIsLoading(false);
-      }, 800); // Hold the last word briefly
+      }, 1200); // Hold the last word briefly (increased)
       return () => clearTimeout(finishTimeout);
     }
 
     const interval = setTimeout(() => {
       setIndex((prev) => prev + 1);
-    }, 200); // 200ms per word
+    }, 400); // Slowed down from 200ms to 400ms per word
 
     return () => clearTimeout(interval);
   }, [index]);
@@ -46,7 +46,7 @@ export default function Loader() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.15, ease: "easeInOut" }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
             className={styles.helloText}
           >
             {helloWords[index]}
