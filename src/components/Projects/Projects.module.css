@@ -1,0 +1,196 @@
+/* ============================================
+   PROJECTS SECTION — STYLES
+   Bento Grid × Filter Tabs × Hover Overlays
+   ============================================ */
+
+/* ---------- Filter Tabs ---------- */
+.filterTabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.filterTab {
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.filterTab:hover {
+  color: var(--text-secondary);
+  border-color: var(--border-subtle);
+}
+
+.filterTabActive {
+  color: var(--text-primary);
+  border-color: var(--border-accent);
+  background: var(--accent-cyan-dim);
+}
+
+/* ---------- Projects Grid (Bento) ---------- */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+/* ---------- Project Card ---------- */
+.projectCard {
+  padding: 0 !important;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  border-radius: var(--radius-lg);
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-glow-mixed);
+  border-color: var(--border-accent);
+}
+
+.cardFeatured {
+  grid-column: span 2;
+}
+
+/* ---------- Project Image Area ---------- */
+.projectImage {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectImageBg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform var(--transition-slow);
+}
+
+.projectCard:hover .projectImageBg {
+  transform: scale(1.05);
+}
+
+/* ---------- Hover Overlay ---------- */
+.projectOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 15, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.projectCard:hover .projectOverlay {
+  opacity: 1;
+}
+
+.overlayBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  transition: all var(--transition-base);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.overlayBtn:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+/* ---------- Card Content ---------- */
+.projectContent {
+  padding: var(--space-6);
+}
+
+.projectTitle {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-3);
+}
+
+.projectDesc {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- Tags ---------- */
+.tagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.tag {
+  padding: var(--space-1) var(--space-3);
+  background: var(--accent-cyan-dim);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+}
+
+/* ---------- Responsive: Tablet ---------- */
+@media (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardFeatured {
+    grid-column: span 1;
+  }
+
+  .filterTabs {
+    gap: var(--space-2);
+    margin-bottom: var(--space-8);
+  }
+
+  .filterTab {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-xs);
+  }
+
+  .projectImage {
+    height: 180px;
+  }
+}
+
+/* ---------- Responsive: Mobile ---------- */
+@media (max-width: 480px) {
+  .projectContent {
+    padding: var(--space-4);
+  }
+
+  .projectTitle {
+    font-size: var(--text-lg);
+  }
+
+  .projectImage {
+    height: 160px;
+  }
+}
