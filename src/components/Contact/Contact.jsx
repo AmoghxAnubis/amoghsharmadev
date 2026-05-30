@@ -27,9 +27,9 @@ export default function Contact() {
   };
 
   const socials = [
-    { name: 'GitHub', icon: Github, href: personalInfo.social.github },
-    { name: 'LinkedIn', icon: Linkedin, href: personalInfo.social.linkedin },
-    { name: 'Twitter', icon: Twitter, href: personalInfo.social.twitter },
+    { name: 'GitHub', icon: GithubIcon, href: personalInfo.social.github },
+    { name: 'LinkedIn', icon: LinkedinIcon, href: personalInfo.social.linkedin },
+    { name: 'Twitter', icon: TwitterIcon, href: personalInfo.social.twitter },
   ];
 
   return (

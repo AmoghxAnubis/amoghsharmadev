@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/components/ui/SocialIcons';
 import { personalInfo } from '@/data/portfolio';
 import styles from './Footer.module.css';
 
@@ -26,7 +26,7 @@ export default function Footer() {
             className={styles.socialLink}
             aria-label="GitHub"
           >
-            <Github size={18} />
+            <GithubIcon size={18} />
           </a>
           <a
             href={personalInfo.social.linkedin}
@@ -35,7 +35,7 @@ export default function Footer() {
             className={styles.socialLink}
             aria-label="LinkedIn"
           >
-            <Linkedin size={18} />
+            <LinkedinIcon size={18} />
           </a>
           <a
             href={personalInfo.social.twitter}
@@ -44,7 +44,7 @@ export default function Footer() {
             className={styles.socialLink}
             aria-label="Twitter"
           >
-            <Twitter size={18} />
+            <TwitterIcon size={18} />
           </a>
         </div>
       </div>
