@@ -4,18 +4,19 @@ import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Text, OrbitControls } from '@react-three/drei';
 import { skills } from '@/data/portfolio';
+import * as THREE from 'three';
 
 // ─── Single floating label on the sphere ──────────────────
 function SkillLabel({ text, position, color }) {
   return (
     <Text
       position={position}
-      fontSize={0.18}
+      fontSize={0.2}
       color={color}
       anchorX="center"
       anchorY="middle"
-      font="/fonts/inter-latin-400-normal.woff"
       fillOpacity={0.9}
+      fontWeight={600}
     >
       {text}
     </Text>
@@ -39,7 +40,6 @@ function SkillSphere() {
     const count = allSkills.length;
 
     return allSkills.map((skill, i) => {
-      // Distribute points on a sphere using the golden spiral / Fibonacci method
       const phi = Math.acos(1 - (2 * (i + 0.5)) / count);
       const theta = Math.PI * (1 + Math.sqrt(5)) * (i + 0.5);
 
@@ -54,7 +54,7 @@ function SkillSphere() {
     });
   }, []);
 
-  // Gentle idle rotation for when user isn't dragging
+  // Gentle idle rotation
   useFrame((_, delta) => {
     if (groupRef.current) {
       groupRef.current.rotation.y += delta * 0.08;
@@ -81,7 +81,11 @@ export default function SkillOrb() {
     <Canvas
       gl={{ alpha: true, antialias: true }}
       camera={{ position: [0, 0, 8], fov: 50 }}
-      style={{ width: '100%', height: '100%' }}
+      style={{ width: '100%', height: '100%', background: 'transparent' }}
+      onCreated={({ gl, scene }) => {
+        gl.setClearColor(0x000000, 0);
+        scene.background = null;
+      }}
     >
       <ambientLight intensity={0.6} />
       <SkillSphere />
