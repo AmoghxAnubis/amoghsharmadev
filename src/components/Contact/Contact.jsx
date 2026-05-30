@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/components/ui/SocialIcons';
 import { personalInfo } from '@/data/portfolio';
 import { SectionHeading, GlassCard, GradientButton, ScrollReveal } from '@/components/ui';
 import styles from './Contact.module.css';
