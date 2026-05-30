@@ -38,34 +38,29 @@
 /* ---------- Projects Grid (Bento) ---------- */
 .projectsGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
 }
 
 /* ---------- Project Card ---------- */
 .projectCard {
-  padding: 0 !important;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  background: #09090b;
+  border: 1px solid #27272a;
   border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition-base);
 }
 
 .projectCard:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-glow-mixed);
-  border-color: var(--border-accent);
-}
-
-.cardFeatured {
-  grid-column: span 2;
+  border-color: #52525b;
 }
 
 /* ---------- Project Image Area ---------- */
 .projectImage {
-  height: 220px;
-  position: relative;
-  overflow: hidden;
+  height: 200px;
+  width: 100%;
 }
 
 .projectImageBg {
@@ -73,65 +68,28 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: transform var(--transition-slow);
-}
-
-.projectCard:hover .projectImageBg {
-  transform: scale(1.05);
-}
-
-/* ---------- Hover Overlay ---------- */
-.projectOverlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(10, 10, 15, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-4);
-  opacity: 0;
-  transition: opacity var(--transition-base);
-}
-
-.projectCard:hover .projectOverlay {
-  opacity: 1;
-}
-
-.overlayBtn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-glass);
-  border: 1px solid var(--border-medium);
-  color: var(--text-primary);
-  transition: all var(--transition-base);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.overlayBtn:hover {
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
-  box-shadow: var(--shadow-glow-cyan);
 }
 
 /* ---------- Card Content ---------- */
 .projectContent {
   padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .projectTitle {
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-3);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f4f4f5;
+  margin-bottom: var(--space-4);
 }
 
 .projectDesc {
-  color: var(--text-secondary);
-  font-size: var(--text-sm);
-  line-height: 1.6;
+  color: #a1a1aa;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: var(--space-6);
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -142,27 +100,52 @@
 .tagsRow {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-4);
+  gap: 8px;
+  margin-bottom: var(--space-6);
 }
 
 .tag {
-  padding: var(--space-1) var(--space-3);
-  background: var(--accent-cyan-dim);
-  border-radius: var(--radius-full);
-  font-size: var(--text-xs);
-  color: var(--accent-cyan);
-  font-family: var(--font-mono);
+  background: #18181b;
+  color: #e4e4e7;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid #27272a;
+}
+
+/* ---------- Links ---------- */
+.projectLinks {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  padding-top: var(--space-4);
+}
+
+.projectLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #a1a1aa;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color var(--transition-base);
+}
+
+.projectLink:hover {
+  color: #f4f4f5;
 }
 
 /* ---------- Responsive: Tablet ---------- */
+@media (max-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .projectsGrid {
     grid-template-columns: 1fr;
-  }
-
-  .cardFeatured {
-    grid-column: span 1;
   }
 
   .filterTabs {

@@ -88,65 +88,51 @@ export default function Projects() {
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
-                className={`${styles.projectCard} ${
-                  project.featured ? styles.cardFeatured : ''
-                }`}
+                className={styles.projectCard}
                 variants={cardVariants}
                 layout
               >
-                <GlassCard
-                  className={styles.projectCard}
-                  style={{ padding: 0 }}
-                  initial={false}
-                  whileInView={undefined}
-                >
-                  {/* ── Image Area ── */}
-                  <div className={styles.projectImage}>
-                    <div
-                      className={styles.projectImageBg}
-                      style={{
-                        background: GRADIENTS[index % GRADIENTS.length],
-                      }}
-                    />
-                    <div className={styles.projectOverlay}>
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={styles.overlayBtn}
-                          aria-label={`View ${project.title} on GitHub`}
-                        >
-                          <GithubIcon size={20} />
-                        </a>
-                      )}
-                      {project.live && (
-                        <a
-                          href={project.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={styles.overlayBtn}
-                          aria-label={`View ${project.title} live demo`}
-                        >
-                          <ExternalLink size={20} />
-                        </a>
-                      )}
-                    </div>
+                <div className={styles.projectImage}>
+                  <div
+                    className={styles.projectImageBg}
+                    style={{
+                      background: GRADIENTS[index % GRADIENTS.length],
+                    }}
+                  />
+                </div>
+                <div className={styles.projectContent}>
+                  <h3 className={styles.projectTitle}>{project.title}</h3>
+                  <p className={styles.projectDesc}>{project.description}</p>
+                  <div className={styles.tagsRow}>
+                    {project.tags.slice(0, 4).map((tag) => (
+                      <span key={tag} className={styles.tag}>
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-
-                  {/* ── Content ── */}
-                  <div className={styles.projectContent}>
-                    <h3 className={styles.projectTitle}>{project.title}</h3>
-                    <p className={styles.projectDesc}>{project.description}</p>
-                    <div className={styles.tagsRow}>
-                      {project.tags.map((tag) => (
-                        <span key={tag} className={styles.tag}>
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  <div className={styles.projectLinks}>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.projectLink}
+                      >
+                        <GithubIcon size={16} /> Code
+                      </a>
+                    )}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.projectLink}
+                      >
+                        <ExternalLink size={16} /> Live
+                      </a>
+                    )}
                   </div>
-                </GlassCard>
+                </div>
               </motion.div>
             ))}
           </motion.div>
