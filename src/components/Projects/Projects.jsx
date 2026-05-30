@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { GithubIcon } from '@/components/ui/SocialIcons';
 import { projects } from '@/data/portfolio';
 import { SectionHeading, GlassCard } from '@/components/ui';
 import styles from './Projects.module.css';
@@ -116,7 +117,7 @@ export default function Projects() {
                           className={styles.overlayBtn}
                           aria-label={`View ${project.title} on GitHub`}
                         >
-                          <Github size={20} />
+                          <GithubIcon size={20} />
                         </a>
                       )}
                       {project.live && (

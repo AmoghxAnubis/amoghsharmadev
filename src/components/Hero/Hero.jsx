@@ -2,8 +2,10 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import { ArrowRight, Download } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
 import { GradientButton } from '@/components/ui';
+import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/components/ui/SocialIcons';
 import ParticleField from './ParticleField';
 import styles from './Hero.module.css';
 
@@ -21,17 +23,14 @@ function useTypewriter(words, { typeSpeed = 80, deleteSpeed = 50, pauseMs = 1800
 
     const tick = () => {
       if (!isDeleting) {
-        // Typing forward
         setCharIdx((prev) => prev + 1);
         setDisplay(current.slice(0, charIdx + 1));
 
         if (charIdx + 1 === current.length) {
-          // Finished typing — pause then delete
           setTimeout(() => setIsDeleting(true), pauseMs);
           return;
         }
       } else {
-        // Deleting
         setCharIdx((prev) => prev - 1);
         setDisplay(current.slice(0, charIdx - 1));
 
@@ -56,16 +55,16 @@ const container = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.18, delayChildren: 0.3 },
+    transition: { staggerChildren: 0.12, delayChildren: 0.2 },
   },
 };
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 25 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
   },
 };
 
@@ -97,31 +96,95 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
-        {/* Greeting */}
-        <motion.h1 className={styles.greeting} variants={fadeUp}>
+        {/* Badge */}
+        <motion.div className={styles.badge} variants={fadeUp}>
+          <span className={styles.badgeDot} />
+          {personalInfo.badge}
+        </motion.div>
+
+        {/* Name */}
+        <motion.h1 className={styles.heading} variants={fadeUp}>
           Hi, I&apos;m{' '}
           <span className={styles.gradientName}>{personalInfo.name}</span>
         </motion.h1>
 
         {/* Typewriter */}
         <motion.div className={styles.typewriterRow} variants={fadeUp}>
+          <span className={styles.typewriterPrefix}>I build</span>
           <span className={styles.typewriterText}>{typedRole}</span>
           <span className={styles.cursor} aria-hidden="true" />
         </motion.div>
 
-        {/* Tagline */}
-        <motion.p className={styles.tagline} variants={fadeUp}>
-          {personalInfo.tagline}
+        {/* Bio */}
+        <motion.p className={styles.bio} variants={fadeUp}>
+          {personalInfo.heroBio}
         </motion.p>
+
+        {/* Tech Pills */}
+        <motion.div className={styles.techPills} variants={fadeUp}>
+          {personalInfo.heroTechPills.map((tech, index) => (
+            <motion.span
+              key={tech.name}
+              className={styles.pill}
+              style={{
+                color: tech.color,
+                borderColor: `${tech.color}30`,
+                backgroundColor: `${tech.color}10`,
+              }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1 + index * 0.06, duration: 0.3 }}
+            >
+              <span
+                className={styles.pillDot}
+                style={{ backgroundColor: tech.color }}
+              />
+              {tech.name}
+            </motion.span>
+          ))}
+        </motion.div>
 
         {/* CTAs */}
         <motion.div className={styles.ctas} variants={fadeUp}>
           <GradientButton variant="fill" href="#projects">
             View Projects
+            <ArrowRight size={16} className={styles.ctaIcon} />
           </GradientButton>
-          <GradientButton variant="outline" href="#contact">
-            Get in Touch
+          <GradientButton variant="outline" href={personalInfo.resumeUrl} target="_blank">
+            Resume
+            <Download size={16} />
           </GradientButton>
+        </motion.div>
+
+        {/* Social Icons */}
+        <motion.div className={styles.socials} variants={fadeUp}>
+          <a
+            href={personalInfo.social.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.socialLink}
+            aria-label="GitHub"
+          >
+            <GithubIcon size={20} />
+          </a>
+          <a
+            href={personalInfo.social.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.socialLink}
+            aria-label="LinkedIn"
+          >
+            <LinkedinIcon size={20} />
+          </a>
+          <a
+            href={personalInfo.social.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.socialLink}
+            aria-label="Twitter"
+          >
+            <TwitterIcon size={20} />
+          </a>
         </motion.div>
       </motion.div>
 
@@ -130,15 +193,15 @@ export default function Hero() {
         className={styles.scrollIndicator}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 0.8 }}
+        transition={{ delay: 2.5, duration: 0.8 }}
         onClick={handleScrollClick}
         role="button"
         tabIndex={0}
         aria-label="Scroll to next section"
         onKeyDown={(e) => e.key === 'Enter' && handleScrollClick()}
       >
-        <span className={styles.scrollText}>Scroll</span>
-        <span className={styles.chevron} aria-hidden="true" />
+        <span className={styles.scrollText}>Scroll to explore</span>
+        <div className={styles.mouseIcon} aria-hidden="true" />
       </motion.div>
     </section>
   );
