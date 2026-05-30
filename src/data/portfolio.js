@@ -14,10 +14,10 @@ export const personalInfo = {
   ],
   badge: "Open to Opportunities",
   tagline: "Crafting digital experiences at the intersection of design and technology",
-  heroBio: "Software engineer with a passion for building products that are not just functional — they're experiences. Specializing in full-stack development, ML, and cloud architecture.",
+  heroBio: "Third year student at Bennett University with a passion for building products that are not just functional — they're experiences. Specializing in full-stack development, ML, and cloud architecture.",
   email: "amogh@example.com",
-  location: "San Francisco, CA",
-  bio: `I'm Amogh, a software engineer with a deep passion for building scalable systems and crafting elegant user experiences. With expertise spanning full-stack development, machine learning, and cloud architecture, I build products that are not just functional — they're experiences. I believe great software should feel invisible, empowering users while delighting them with every interaction.`,
+  location: "Greater Noida, India",
+  bio: `I'm Amogh, a third year Computer Science student at Bennett University (CGPA: 8.2) with a deep passion for building scalable systems and crafting elegant user experiences. With expertise spanning full-stack development, machine learning, and cloud architecture, I build products that are not just functional — they're experiences.`,
   aboutTraits: [
     {
       icon: "</>",
@@ -46,7 +46,7 @@ export const personalInfo = {
       { title: "ML Engineer", subtitle: "DataLabs AI" },
     ],
     education: [
-      { title: "IIT", subtitle: "B.Tech in Computer Science" },
+      { title: "Bennett University", subtitle: "B.Tech in Computer Science (3rd Year) • 8.2 CGPA" },
     ],
     interests: ["Cloud Architecture", "Machine Learning", "React", "Kubernetes", "Python", "Docker"],
   },
@@ -271,13 +271,13 @@ export const experience = [
 export const education = [
   {
     degree: "B.Tech in Computer Science",
-    institution: "Indian Institute of Technology",
-    year: "2017 — 2021",
-    gpa: "9.2 / 10",
+    institution: "Bennett University",
+    year: "3rd Year (Ongoing)",
+    gpa: "8.2 / 10",
     highlights: [
       "Specialization in Artificial Intelligence and Machine Learning",
-      "Published 2 papers in international conferences",
-      "Dean's List for Academic Excellence",
+      "Active member of tech clubs and hackathon participant",
+      "Maintaining a strong academic record with 8.2 CGPA",
     ],
   },
 ];
