@@ -33,7 +33,7 @@ export default function Terminal() {
         particleCount: 150,
         spread: 80,
         origin: { y: 0.6 },
-        colors: ['#00F0FF', '#8B5CF6', '#F472B6', '#34D399', '#FBBF24'],
+        colors: ['#FFFFFF', '#CCCCCC', '#999999', '#E0E0E0', '#B0B0B0'],
       });
     } catch (e) {
       // silently fail if confetti can't load

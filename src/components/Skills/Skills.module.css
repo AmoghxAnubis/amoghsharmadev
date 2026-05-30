@@ -126,21 +126,21 @@
 }
 
 .profExpert {
-  background: rgba(52, 211, 153, 0.15);
-  color: #34D399;
-  border: 1px solid rgba(52, 211, 153, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .profProficient {
-  background: rgba(96, 165, 250, 0.15);
-  color: #60A5FA;
-  border: 1px solid rgba(96, 165, 250, 0.25);
+  background: rgba(180, 180, 180, 0.1);
+  color: #B0B0B0;
+  border: 1px solid rgba(180, 180, 180, 0.2);
 }
 
 .profFamiliar {
-  background: rgba(251, 191, 36, 0.15);
-  color: #FBBF24;
-  border: 1px solid rgba(251, 191, 36, 0.25);
+  background: rgba(120, 120, 120, 0.1);
+  color: #888888;
+  border: 1px solid rgba(120, 120, 120, 0.2);
 }
 
 /* ---------- Card Stats ---------- */

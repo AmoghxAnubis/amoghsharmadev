@@ -16,7 +16,7 @@ function ParticleCanvas({ className }) {
           density: { enable: true, width: 1920, height: 1080 },
         },
         color: {
-          value: ['#00F0FF', '#8B5CF6'],
+          value: ['#FFFFFF', '#888888'],
         },
         shape: { type: 'circle' },
         opacity: {
@@ -40,7 +40,7 @@ function ParticleCanvas({ className }) {
         links: {
           enable: true,
           distance: 140,
-          color: '#00F0FF',
+          color: '#FFFFFF',
           opacity: 0.12,
           width: 1,
         },

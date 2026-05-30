@@ -51,14 +51,14 @@ export const personalInfo = {
     interests: ["Cloud Architecture", "Machine Learning", "React", "Kubernetes", "Python", "Docker"],
   },
   heroTechPills: [
-    { name: "React", color: "#61DAFB" },
-    { name: "Python", color: "#3776AB" },
-    { name: "TypeScript", color: "#3178C6" },
+    { name: "React", color: "#FFFFFF" },
+    { name: "Python", color: "#D0D0D0" },
+    { name: "TypeScript", color: "#E0E0E0" },
     { name: "Next.js", color: "#FFFFFF" },
-    { name: "Node.js", color: "#339933" },
-    { name: "Docker", color: "#2496ED" },
-    { name: "AWS", color: "#FF9900" },
-    { name: "PyTorch", color: "#EE4C2C" },
+    { name: "Node.js", color: "#C0C0C0" },
+    { name: "Docker", color: "#D0D0D0" },
+    { name: "AWS", color: "#B0B0B0" },
+    { name: "PyTorch", color: "#C0C0C0" },
   ],
   stats: [
     { label: "Projects Built", value: 30 },
@@ -78,7 +78,7 @@ export const skills = [
   {
     category: "Frontend",
     icon: "Monitor",
-    color: "#00F0FF",
+    color: "#FFFFFF",
     items: [
       { name: "React", abbr: "Re", level: 95, years: "4+", projects: 22, proficiency: "expert" },
       { name: "Next.js", abbr: "Nx", level: 90, years: "3+", projects: 15, proficiency: "expert" },
@@ -91,7 +91,7 @@ export const skills = [
   {
     category: "Backend",
     icon: "Server",
-    color: "#8B5CF6",
+    color: "#D0D0D0",
     items: [
       { name: "Node.js", abbr: "No", level: 92, years: "4+", projects: 20, proficiency: "expert" },
       { name: "Python", abbr: "Py", level: 90, years: "4+", projects: 18, proficiency: "expert" },
@@ -104,7 +104,7 @@ export const skills = [
   {
     category: "ML / AI",
     icon: "Brain",
-    color: "#F472B6",
+    color: "#B0B0B0",
     items: [
       { name: "TensorFlow", abbr: "TF", level: 85, years: "3+", projects: 12, proficiency: "proficient" },
       { name: "PyTorch", abbr: "PT", level: 82, years: "2+", projects: 10, proficiency: "proficient" },
@@ -117,7 +117,7 @@ export const skills = [
   {
     category: "DevOps / Cloud",
     icon: "Cloud",
-    color: "#34D399",
+    color: "#C0C0C0",
     items: [
       { name: "Docker", abbr: "Dk", level: 90, years: "3+", projects: 20, proficiency: "expert" },
       { name: "Kubernetes", abbr: "K8", level: 82, years: "2+", projects: 10, proficiency: "proficient" },
@@ -130,7 +130,7 @@ export const skills = [
   {
     category: "Blockchain",
     icon: "Link",
-    color: "#FBBF24",
+    color: "#A0A0A0",
     items: [
       { name: "Solidity", abbr: "So", level: 80, years: "2+", projects: 8, proficiency: "proficient" },
       { name: "Ethereum", abbr: "Eth", level: 82, years: "2+", projects: 9, proficiency: "proficient" },
@@ -143,7 +143,7 @@ export const skills = [
   {
     category: "Tools",
     icon: "Palette",
-    color: "#FB923C",
+    color: "#E0E0E0",
     items: [
       { name: "Figma", abbr: "Fg", level: 90, years: "3+", projects: 20, proficiency: "expert" },
       { name: "Git", abbr: "Gt", level: 95, years: "5+", projects: 30, proficiency: "expert" },
