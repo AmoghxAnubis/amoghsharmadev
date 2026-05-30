@@ -71,7 +71,7 @@ export const personalInfo = {
     twitter: "https://x.com/_amoghsharma_",
     email: "mailto:amoghzack321@gmail.com",
   },
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/resume final.pdf",
 };
 
 export const skills = [
