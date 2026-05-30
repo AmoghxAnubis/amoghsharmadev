@@ -158,13 +158,13 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "AI Code Review Assistant",
+    title: "Synapse",
     description:
-      "An intelligent code review tool powered by GPT-4 that analyzes pull requests, suggests improvements, and detects potential bugs in real-time. Integrated with GitHub Actions for seamless CI/CD workflows.",
-    tags: ["Python", "FastAPI", "GPT-4", "React", "Docker"],
+      "A local-first, privacy-centric AI OS assistant — the Eyes, Voice & Hands of your machine. Built on a strict 'Zero Cloud Leakage' philosophy: all RAG processing, vector embeddings, and LLM inference run entirely on-device via Ollama/Llama 3. Features semantic memory (ChromaDB), drag-and-drop document ingestion (PDF, text), SaaS integrations (GitHub, Slack, Notion), and autonomic workflow agents that control OS-level state.",
+    tags: ["Next.js", "FastAPI", "Python", "ChromaDB", "Ollama", "Llama 3", "TypeScript", "Framer Motion"],
     category: "ML/AI",
-    github: "https://github.com/amogh/ai-code-review",
-    live: "https://ai-review.demo.com",
+    github: "https://github.com/AmoghxAnubis/Synapse",
+    live: "https://synapse-dtvb.vercel.app",
     featured: true,
   },
   {
