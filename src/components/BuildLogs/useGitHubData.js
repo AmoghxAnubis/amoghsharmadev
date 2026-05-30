@@ -75,7 +75,7 @@ export function useGitHubData() {
         // Parse events into build log entries
         const buildLogs = events
           .filter((e) => ['PushEvent', 'CreateEvent', 'PullRequestEvent', 'IssuesEvent'].includes(e.type))
-          .slice(0, 15)
+          .slice(0, 6)
           .map((event) => {
             let title = '';
             let description = '';
