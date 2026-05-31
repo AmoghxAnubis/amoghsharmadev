@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Home, User, Layers, FolderKanban, Briefcase, GraduationCap, Mail } from 'lucide-react';
+import { Home, User, Layers, FolderKanban, Briefcase, GraduationCap, Mail, FileText } from 'lucide-react';
 import { navLinks } from '@/data/portfolio';
 import styles from './Navbar.module.css';
 
@@ -13,6 +13,7 @@ const navItems = [
   { id: 'projects', label: 'Projects', icon: FolderKanban, href: '#projects' },
   { id: 'experience', label: 'Experience', icon: Briefcase, href: '#experience' },
   { id: 'education', label: 'Education', icon: GraduationCap, href: '#education' },
+  { id: 'research', label: 'Research', icon: FileText, href: '#research' },
   { id: 'contact', label: 'Contact', icon: Mail, href: '#contact' },
 ];
 
